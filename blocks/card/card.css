@@ -1,0 +1,13 @@
+.card {
+    display: grid;
+    border-radius: 10px;
+    background-color: white;
+    grid-template-rows: repeat(auto-fill, minmax(282px, 1fr));
+}
+
+@media screen and (max-width: 1279px) {
+    .card {
+        grid-template-rows: repeat(1, 282px);
+        margin: 0 auto;
+    }
+}
