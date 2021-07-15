@@ -1,11 +1,16 @@
 .button__add {
-    height: 50px;
-    width: 150px;
-    border: 1px solid #FFFFFF;
+  height: 50px;
+  width: 150px;
+  border: 2px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
 }
 
 @media screen and (max-width: 1279px) {
-    .button__add {
-        width: 282px;
-    }
+  .button__add {
+    width: 282px;
+    height: 48px;
+  }
 }

@@ -1,107 +1,97 @@
 <!doctype html>
-<html lang=ru>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>MESTO</title>
-    <link rel="stylesheet" type="text/css" href="pages/index.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>MESTO</title>
+  <link rel="stylesheet" type="text/css" href="pages/index.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="page">
-<header class="header">
-    <img class="header__logo" src="images/logo.svg" alt="">
-</header>
-<main class="content">
+  <header class="header">
+    <img class="header__logo" src="images/logo.svg" alt="Логотип">
+  </header>
+  <main class="content">
     <section class="profile">
-        <div class="profile__avatar">
-            <img class="profile__avatar-image" src="images/avatar.jpg" alt="">
+      <div class="profile__avatar">
+        <img class="profile__image" src="images/avatar.jpg" alt="Жак-Ив Кусто">
+      </div>
+      <div class="profile__info">
+        <div class="profile__conteiner">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button type="button" class="button button__edit">
+            <img src="images/pencil.svg" alt="Редактировать">
+          </button>
         </div>
-        <div class="profile__info">
-            <div class="profile__conteiner">
-                <h1 class="profile__name">Жак-Ив Кусто</h1>
-                <button class="button button__edit">
-                    <img src="images/pencil.svg" alt="">
-                </button>
-            </div>
-            <p class="profile__subtitle">Исследователь океана</p>
-        </div>
-        <button class="button button__add">
-            <img src="images/plus.svg" alt="">
-        </button>
+        <p class="profile__subtitle">Исследователь океана</p>
+      </div>
+      <button type="button" class="button button__add">
+        <img src="images/plus.svg" alt="Добавить">
+      </button>
     </section>
 
     <section class="photo-grid">
-        <nav>
-            <ul class="photo-grid__cards">
-                <li class="card">
-                    <img class="card__image" src="images/david-boca.jpg" alt="">
-                    <div class="card__info">
-                        <h2 class="card__title">Морское дно</h2>
-                        <button class="button card__like card__like_active">
-                        </button>
-                    </div>
-                </li>
-                <li class="card">
-                    <img class="card__image" src="images/mathilda-khoo.jpg" alt="">
-                    <div class="card__info">
-                        <h2 class="card__title">Волосистая цианея</h2>
-                        <button class="button card__like">
-
-                        </button>
-                    </div>
-                </li>
-                <li class="card">
-                    <img class="card__image" src="images/ali-abdul-rahman.jpg" alt="">
-                    <div class="card__info">
-                        <h2 class="card__title">Подводный фон</h2>
-                        <button class="button card__like"></button>
-                    </div>
-                </li>
-                <li class="card">
-                    <img class="card__image" src="images/david-clode.jpg" alt="">
-                    <div class="card__info">
-                        <h2 class="card__title">Рыба актиния</h2>
-                        <button class="button card__like">
-
-                        </button>
-                    </div>
-                </li>
-                <li class="card">
-                    <img class="card__image" src="images/joel-filipe.jpg" alt="">
-                    <div class="card__info">
-                        <h2 class="card__title">Белая медуза</h2>
-                        <button class="button card__like"></button>
-                    </div>
-                </li>
-                <li class="card">
-                    <img class="card__image" src="images/tomas-nozina.jpg" alt="">
-                    <div class="card__info">
-                        <h2 class="card__title">Океанариум Тюрауми</h2>
-                        <button class="button card__like"></button>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+      <ul class="photo-grid__cards">
+        <li class="card">
+          <img class="card__image" src="images/david-boca.jpg" alt="Морское дно">
+          <div class="card__info">
+            <h2 class="card__title">Морское дно</h2>
+            <button type="button" class="button card__like card__like_active">
+            </button>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__image" src="images/mathilda-khoo.jpg" alt="Волосистая цианея">
+          <div class="card__info">
+            <h2 class="card__title">Волосистая цианея</h2>
+            <button type="button" class="button card__like"></button>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__image" src="images/ali-abdul-rahman.jpg" alt="Подводный фон">
+          <div class="card__info">
+            <h2 class="card__title">Подводный фон</h2>
+            <button type="button" class="button card__like"></button>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__image" src="images/david-clode.jpg" alt="Рыба актиния">
+          <div class="card__info">
+            <h2 class="card__title">Рыба актиния</h2>
+            <button type="button" class="button card__like"></button>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__image" src="images/joel-filipe.jpg" alt="Белая медуза">
+          <div class="card__info">
+            <h2 class="card__title">Белая медуза</h2>
+            <button type="button" class="button card__like"></button>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__image" src="images/tomas-nozina.jpg" alt="Океанариум Тюрауми">
+          <div class="card__info">
+            <h2 class="card__title">Океанариум Тюрауми</h2>
+            <button type="button" class="button card__like"></button>
+          </div>
+        </li>
+      </ul>
     </section>
-
-    <footer class="footer">
-        <p class="footer__info">© 2020 Mesto Russia</p>
-    </footer>
-</main>
-<div class="popup popup_active">
+  </main>
+  <footer class="footer">
+    <p class="footer__info">&copy; 2020 Mesto Russia</p>
+  </footer>
+  <div class="popup">
     <div class="popup__content">
-        <button class="button popup__close"></button>
-        <form class="form__edit">
-            <h2 class="form__title">Редактировать профиль</h2>
-            <fieldset class="form__field">
-                <input type="text" class="input"  name="name" value="Жак-Ив Кусто">
-            </fieldset>
-            <fieldset class="form__field">
-                <input type="text" class="input"  name="subtitle" value="Исследователь океана">
-            </fieldset>
-            <button class="button button__submit">Сохранить</button>
-
-        </form>
+      <button type="button" class="button popup__close"></button>
+      <h2 class="form__title">Редактировать профиль</h2>
+      <form name="form__edit" class="form__edit">
+        <fieldset class="form__field">
+          <input type="text" class="input" name="name" placeholder="Введите имя" required value="">
+          <input type="text" class="input" name="subtitle" placeholder="Введите должность" required value="">
+        </fieldset>
+        <button type="submit" class="button button__submit">Сохранить</button>
+      </form>
     </div>
-</div>
+  </div>
 </body>
 </html>

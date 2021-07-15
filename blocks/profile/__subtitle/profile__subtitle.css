@@ -1,23 +1,23 @@
 .profile__subtitle {
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    text-align: left;
-    color: #ffffff;
-    margin: 0;
-    padding: 16px 0 0;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: #ffffff;
+  margin: 0;
+  padding: 8px 0 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1279px) {
-    .profile__subtitle {
-        font-size: 14px;
-        line-height: 17px;
-        padding-top: 14px;
-        max-width: 282px;
-    }
+  .profile__subtitle {
+    font-size: 14px;
+    line-height: 17px;
+    padding-top: 9px;
+    max-width: 282px;
+  }
 }
