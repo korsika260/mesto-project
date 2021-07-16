@@ -8,11 +8,11 @@
 @import url("../blocks/profile/__image/profile__image.css");
 @import url("../blocks/profile/__info/profile__info.css");
 @import url("../blocks/profile/__conteiner/profile__conteiner.css");
-@import url("../blocks/button/__edit/button__edit.css");
+@import url("../blocks/profile/__edit/profile__edit.css");
 @import url("../blocks/profile/__name/profile__name.css");
 @import url("../blocks/profile/__subtitle/profile__subtitle.css");
-@import url("../blocks/button/__add/button__add.css");
-@import url("../blocks/button/__add/_image/button__add_image.css");
+@import url("../blocks/profile/__add/profile__add.css");
+@import url("../blocks/profile/__add/_image/profile__add_image.css");
 @import url("../blocks/photo-grid/photo-grid.css");
 @import url("../blocks/photo-grid/__cards/photo-grid__cards.css");
 @import url("../blocks/card/card.css");
@@ -31,5 +31,5 @@
 @import url("../blocks/popup/__title/popup__title.css");
 @import url("../blocks/form/__field/form__field.css");
 @import url("../blocks/input/input.css");
-@import url("../blocks/button/__submit/button__submit.css");
+@import url("../blocks/form/__submit/form__submit.css");
 
