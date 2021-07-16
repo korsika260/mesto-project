@@ -18,14 +18,14 @@
       <div class="profile__info">
         <div class="profile__conteiner">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <button type="button" class="button button__edit">
+          <button type="button" class="button__edit">
             <img src="images/pencil.svg" alt="Редактировать">
           </button>
         </div>
         <p class="profile__subtitle">Исследователь океана</p>
       </div>
-      <button type="button" class="button button__add">
-        <img src="images/plus.svg" alt="Добавить">
+      <button type="button" class="button__add">
+        <img src="images/plus.svg" class="button__add_image" alt="Добавить">
       </button>
     </section>
 
@@ -35,7 +35,7 @@
           <img class="card__image" src="images/david-boca.jpg" alt="Морское дно">
           <div class="card__info">
             <h2 class="card__title">Морское дно</h2>
-            <button type="button" class="button card__like card__like_active">
+            <button type="button" class="card__like card__like_active">
             </button>
           </div>
         </li>
@@ -43,35 +43,35 @@
           <img class="card__image" src="images/mathilda-khoo.jpg" alt="Волосистая цианея">
           <div class="card__info">
             <h2 class="card__title">Волосистая цианея</h2>
-            <button type="button" class="button card__like"></button>
+            <button type="button" class="card__like"></button>
           </div>
         </li>
         <li class="card">
           <img class="card__image" src="images/ali-abdul-rahman.jpg" alt="Подводный фон">
           <div class="card__info">
             <h2 class="card__title">Подводный фон</h2>
-            <button type="button" class="button card__like"></button>
+            <button type="button" class="card__like"></button>
           </div>
         </li>
         <li class="card">
           <img class="card__image" src="images/david-clode.jpg" alt="Рыба актиния">
           <div class="card__info">
             <h2 class="card__title">Рыба актиния</h2>
-            <button type="button" class="button card__like"></button>
+            <button type="button" class="card__like"></button>
           </div>
         </li>
         <li class="card">
           <img class="card__image" src="images/joel-filipe.jpg" alt="Белая медуза">
           <div class="card__info">
             <h2 class="card__title">Белая медуза</h2>
-            <button type="button" class="button card__like"></button>
+            <button type="button" class="card__like"></button>
           </div>
         </li>
         <li class="card">
           <img class="card__image" src="images/tomas-nozina.jpg" alt="Океанариум Тюрауми">
           <div class="card__info">
             <h2 class="card__title">Океанариум Тюрауми</h2>
-            <button type="button" class="button card__like"></button>
+            <button type="button" class="card__like"></button>
           </div>
         </li>
       </ul>
@@ -82,14 +82,14 @@
   </footer>
   <div class="popup">
     <div class="popup__content">
-      <button type="button" class="button popup__close"></button>
-      <h2 class="form__title">Редактировать профиль</h2>
-      <form name="form__edit" class="form__edit">
+      <button type="button" class="popup__close"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form name="form" class="form">
         <fieldset class="form__field">
           <input type="text" class="input" name="name" placeholder="Введите имя" required value="">
           <input type="text" class="input" name="subtitle" placeholder="Введите должность" required value="">
         </fieldset>
-        <button type="submit" class="button button__submit">Сохранить</button>
+        <button type="submit" class="button__submit">Сохранить</button>
       </form>
     </div>
   </div>

@@ -1,4 +1,9 @@
 .button__edit {
+  background: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,6 +12,11 @@
   margin-top: 5px;
   margin-left: 19px;
   border: 1px solid #FFFFFF;
+  transition: 0.7s opacity;
+}
+
+.button__edit:hover {
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 1279px) {
@@ -14,6 +24,6 @@
     height: 18px;
     width: 18px;
     margin-top: 3px;
-    margin-left: 38px;
+    margin-left: 10px;
   }
 }

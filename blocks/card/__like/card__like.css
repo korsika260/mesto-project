@@ -1,15 +1,20 @@
 .card__like {
-    width: 22px;
-    height: 19px;
-    margin: 0;
-    padding: 0;
-    background-image: url('../../../images/like.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 20px 20px;
-    background-color: #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 22px;
+  height: 19px;
+  margin: 0;
+  padding: 0;
+  background-image: url('../../../images/like.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  background-color: #FFFFFF;
 }
 
 .card__like:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }

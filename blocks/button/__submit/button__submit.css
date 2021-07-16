@@ -1,25 +1,29 @@
 .button__submit {
-    border-radius: 2px;
-    margin: 18px 0 0;
-    padding: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #000000;
-    background-color: #000000;
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    text-align: center;
-    color: #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 2px;
+  margin: 18px 0 0;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000;
+  background: #000000 none;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 1279px) {
-    .button__submit {
-        font-size: 14px;
-        line-height: 17px;
-        margin-top: 9px;
-    }
+  .button__submit {
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 14px;
+  }
 }
