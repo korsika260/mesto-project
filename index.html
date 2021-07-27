@@ -31,56 +31,15 @@
 
     <section class="photo-grid">
       <ul class="photo-grid__cards">
-        <li class="card">
-          <img class="card__image" src="images/david-boca.jpg" alt="Морское дно">
-          <div class="card__info">
-            <h2 class="card__title">Морское дно</h2>
-            <button type="button" class="card__like card__like_active">
-            </button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="images/mathilda-khoo.jpg" alt="Волосистая цианея">
-          <div class="card__info">
-            <h2 class="card__title">Волосистая цианея</h2>
-            <button type="button" class="card__like"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="images/ali-abdul-rahman.jpg" alt="Подводный фон">
-          <div class="card__info">
-            <h2 class="card__title">Подводный фон</h2>
-            <button type="button" class="card__like"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="images/david-clode.jpg" alt="Рыба актиния">
-          <div class="card__info">
-            <h2 class="card__title">Рыба актиния</h2>
-            <button type="button" class="card__like"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="images/joel-filipe.jpg" alt="Белая медуза">
-          <div class="card__info">
-            <h2 class="card__title">Белая медуза</h2>
-            <button type="button" class="card__like"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="images/tomas-nozina.jpg" alt="Океанариум Тюрауми">
-          <div class="card__info">
-            <h2 class="card__title">Океанариум Тюрауми</h2>
-            <button type="button" class="card__like"></button>
-          </div>
-        </li>
+        
+        
       </ul>
     </section>
   </main>
   <footer class="footer">
     <p class="footer__info">&copy; 2020 Mesto Russia</p>
   </footer>
-  <div class="popup">
+  <div class="popup" id="popupEdit">
     <div class="popup__content">
       <button type="button" class="popup__close"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
@@ -90,6 +49,19 @@
           <input type="text" class="input" name="subtitle" placeholder="Введите должность" required value="">
         </fieldset>
         <button type="submit" class="form__submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <div class="popup" id="popupAdd">
+    <div class="popup__content">
+      <button type="button" class="popup__close"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form name="form" class="form">
+        <fieldset class="form__field">
+          <input type="text" class="input" name="name" placeholder="Название" required value="">
+          <input type="text" class="input" name="subtitle" placeholder="Ссылка на картинку" required value="">
+        </fieldset>
+        <button type="submit" class="form__submit">Создать</button>
       </form>
     </div>
   </div>
