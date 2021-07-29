@@ -4,6 +4,7 @@
   background-color: white;
   grid-template-rows: repeat(auto-fill, minmax(282px, 1fr));
   margin-bottom: 3px;
+  position: relative;
 }
 
 @media screen and (max-width: 1279px) {
