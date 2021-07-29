@@ -55,15 +55,25 @@ const initialCards = [
   const photoGridCards = document.querySelector('.photo-grid__cards');
 
   function addCard(name,link){
-    photoGridCards.insertAdjacentHTML('afterbegin',`
-    <li class="card">
-          <img class="card__image" src="${link}" alt="${name}">
+      const card = document.createElement('li');
+      card.innerHTML = `
+      <img class="card__image" src="${link}" alt="${name}">
           <div class="card__info">
             <h2 class="card__title">${name}</h2>
             <button type="button" class="card__like">
             </button>
           </div>
-        </li>`); 
+      `;
+      card.classList.add('card');
+    photoGridCards.insertAdjacentElement('afterbegin', card);
+    const like = card.querySelector('.card__like');
+    like.addEventListener('click', function(){
+       if (like.classList.contains('card__like_active')){
+            like.classList.remove('card__like_active');
+       } else {
+        like.classList.add('card__like_active');
+       }
+    });
   }
 
   for(let index=initialCards.length -1; index>=0; index--){
