@@ -1,4 +1,4 @@
-.card__delete {
+.card__remove {
   position: absolute;
   width: 18px;
   height: 19px;
@@ -17,6 +17,6 @@
   transition: 0.7s opacity;
 }
 
-.card__delete:hover {
+.card__remove:hover {
   opacity: 0.6;
 }

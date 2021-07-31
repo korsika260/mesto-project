@@ -12,3 +12,4 @@
 + Медиазапросы
 + Верстка по Figma
 + POPUP
++ JavaScript
