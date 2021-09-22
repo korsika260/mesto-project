@@ -1,0 +1,15 @@
+.input {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  background: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0 0 30px;
+  padding: 0 0 10px;
+}
