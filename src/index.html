@@ -6,68 +6,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="page">
-<header class="header">
-  <img class="header__logo" src="<%=require('./images/logo.svg')%>" alt="Логотип">
-</header>
-<main class="content">
-  <section class="profile">
-    <div class="profile__avatar">
-      <img class="profile__image" src="<%=require('./images/avatar.jpg')%>" alt="Жак-Ив Кусто">
-    </div>
-    <div class="profile__info">
-      <div class="profile__conteiner">
-        <h1 class="profile__name">Жак-Ив Кусто</h1>
-        <button type="button" class="profile__edit">
-          <img src="<%=require('./images/pencil.svg')%>" alt="Редактировать">
-        </button>
+  <header class="header">
+    <img class="header__logo" src="<%=require('./images/logo.svg')%>" alt="Логотип">
+  </header>
+  <main class="content">
+    <section class="profile">
+      <div class="profile__avatar">
+        <img class="profile__image" src="<%=require('./images/avatar.jpg')%>" alt="Жак-Ив Кусто">
       </div>
-      <p class="profile__subtitle">Исследователь океана</p>
-    </div>
-    <button type="button" class="profile__add">
-      <img src="<%=require('./images/plus.svg')%>" class="profile__imageadd" alt="Добавить">
-    </button>
-  </section>
+      <div class="profile__info">
+        <div class="profile__conteiner">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button type="button" class="profile__edit">
+            <img src="<%=require('./images/pencil.svg')%>" alt="Редактировать">
+          </button>
+        </div>
+        <p class="profile__subtitle">Исследователь океана</p>
+      </div>
+      <button type="button" class="profile__add">
+        <img src="<%=require('./images/plus.svg')%>" class="profile__imageadd" alt="Добавить">
+      </button>
+    </section>
 
-  <section class="photo-grid">
-    <ul class="photo-grid__cards">
-    </ul>
-  </section>
-</main>
-<footer class="footer">
-  <p class="footer__info">&copy; 2020 Mesto Russia</p>
-</footer>
-<div class="popup" id="popupEdit">
-  <div class="popup__content">
-    <button type="button" class="popup__close"></button>
-    <h2 class="popup__title">Редактировать профиль</h2>
-    <form name="form" class="form">
-      <fieldset class="form__field">
-        <input type="text" class="input" name="name" placeholder="Введите имя" required value="">
-        <input type="text" class="input" name="subtitle" placeholder="Введите должность" required value="">
-      </fieldset>
-      <button type="submit" class="form__submit">Сохранить</button>
-    </form>
+    <section class="photo-grid">
+      <ul class="photo-grid__cards">
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__info">&copy; 2020 Mesto Russia</p>
+  </footer>
+
+  <div class="popup" id="popupEdit">
+    <div class="popup__content">
+      <button type="button" class="popup__close"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form id="formProfile" class="form">
+        <fieldset class="form__field">
+          <input type="text" class="input" name="name" placeholder="Имя" minlength="2" maxlength="40"
+                 required novalidate>
+          <span class="error name-error"></span>
+        </fieldset>
+        <fieldset class="form__field">
+          <input type="text" class="input" name="subtitle" placeholder="О себе" minlength="2" maxlength="200" required
+                 novalidate>
+          <span class="error subtitle-error"></span>
+        </fieldset>
+        <button type="submit" class="form__submit">Сохранить</button>
+      </form>
+    </div>
   </div>
-</div>
-<div class="popup" id="popupAdd">
-  <div class="popup__content">
-    <button type="button" class="popup__close"></button>
-    <h2 class="popup__title">Новое место</h2>
-    <form name="form" class="form">
-      <fieldset class="form__field">
-        <input type="text" class="input" name="name" placeholder="Название" required value="">
-        <input type="text" class="input" name="subtitle" placeholder="Ссылка на картинку" required value="">
-      </fieldset>
-      <button type="submit" class="form__submit">Создать</button>
-    </form>
+  <div class="popup" id="popupAdd">
+    <div class="popup__content">
+      <button type="button" class="popup__close"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form id="formNew" class="form">
+        <fieldset class="form__field">
+          <input type="text" class="input" name="name" placeholder="Название" minlength="2" maxlength="30" required
+                 novalidate>
+          <span class="error name-error"></span>
+          <input type="url" class="input" name="subtitle" placeholder="Ссылка на картинку" required novalidate>
+          <span class="error subtitle-error"></span>
+        </fieldset>
+        <button disabled type="submit" class="form__submit">Создать</button>
+      </form>
+    </div>
   </div>
-</div>
-<div class="popup popup_image" id="popapImage">
-  <div class="modal">
-    <button type="button" class="popup__close"></button>
-    <img class="modal__img" src="<%=require('./images/ali-abdul-rahman.jpg')%>" alt="белая медуза">
-    <h2 class="modal__caption">Белая медуза</h2>
+  <div class="popup popup_image" id="popapImage">
+    <div class="modal">
+      <button type="button" class="popup__close"></button>
+      <img class="modal__img" src="<%=require('./images/ali-abdul-rahman.jpg')%>" alt="белая медуза">
+      <h2 class="modal__caption"></h2>
+    </div>
   </div>
-</div>
 </body>
 </html>
