@@ -1,68 +1,63 @@
-import { openPopup, closePopup } from './modal'
-import { enableValidation } from './validate';
-import {initialCards, addCard} from './card'
-
-/* Подключение popup Редактирование профиля */
-const btnProfileEdit = document.querySelector('.profile__edit');
-const popupEdit = document.querySelector('#popupEdit');
-const formEdit = popupEdit.querySelector('.form');
+import {closePopup, openPopup} from './modal'
+import {clearValidation, enableValidation} from './validate';
+import {addCard} from './card'
+import {
+  btnProfileEdit,
+  formAdd,
+  formEdit,
+  inputAddLink,
+  inputAddName,
+  inputProfileName,
+  inputProfileSubtitle,
+  popupAdd,
+  popupEdit,
+  profileAdd,
+  profileName,
+  profileSubtitle,
+  initialCards
+} from "./constants";
 
 // открыть попап редактирования профиля
 const profilePopupOpen = () => {
   openPopup(popupEdit);
-  const name = document.querySelector('.profile__name').textContent;
-  popupEdit.querySelectorAll('input')[0].value = name;
-  const subtitle = document.querySelector('.profile__subtitle').textContent;
-  popupEdit.querySelectorAll('input')[1].value = subtitle;
+  clearValidation(formEdit);
+  inputProfileName.value = profileName.textContent;
+  inputProfileSubtitle.value = profileSubtitle.textContent;
 }
-
 
 // добавить обработчики на кнопки открытия и закрытия попапа редактирования профиля
 btnProfileEdit.addEventListener('click', profilePopupOpen);
 
 formEdit.addEventListener('submit', function (evt) {
   evt.preventDefault();
-  document.querySelector('.profile__name').textContent = popupEdit.querySelectorAll('input')[0].value;
-  document.querySelector('.profile__subtitle').textContent = popupEdit.querySelectorAll('input')[1].value;
+  profileName.textContent = inputProfileName.value;
+  profileSubtitle.textContent = inputProfileSubtitle.value;
   closePopup(popupEdit);
 });
 
-
-
-
-for (let index = initialCards.length - 1; index >= 0; index--) {
-  addCard(initialCards[index].name, initialCards[index].link);
-}
-
-
-/* Подключение popup Добавление карточки */
-const popupAdd = document.querySelector('#popupAdd');
-const formAdd = popupAdd.querySelector('.form');
-const profileAdd = document.querySelector('.profile__add');
+initialCards.forEach(item => {
+  addCard(item.name, item.link);
+});
 
 // добавить обработчики на кнопки открытия и закрытия попапа редактирования нового места
-profileAdd.addEventListener('click', ()=>openPopup(popupAdd));
-
+profileAdd.addEventListener('click', function () {
+  openPopup(popupAdd);
+  clearValidation(formAdd);
+});
 
 formAdd.addEventListener('submit', function (evt) {
   evt.preventDefault();
-  const name = popupAdd.querySelectorAll('input')[0].value;
-  const link = popupAdd.querySelectorAll('input')[1].value;
+  const name = inputAddName.value;
+  const link = inputAddLink.value;
   addCard(name, link);
-  popupAdd.querySelectorAll('input')[0].value = '';
-  popupAdd.querySelectorAll('input')[1].value = '';
-  newPopupClose();
-});
-
-
-enableValidation({
-  formSelector: '#formProfile',
-  inputSelector: '.input',
-  buttonSelector: '.form__submit'
+  inputAddName.value = '';
+  inputAddLink.value = '';
+  closePopup(popupAdd);
 });
 
 enableValidation({
-  formSelector: '#formNew',
+  formSelector: '.form',
   inputSelector: '.input',
-  buttonSelector: '.form__submit'
+  buttonSelector: '.form__submit',
+  errorClass: 'input__error'
 });
