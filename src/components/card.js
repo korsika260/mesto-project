@@ -2,7 +2,7 @@
 import {openPopup} from "./modal";
 import {modalImage, modalImageCaption, photoGridCards, popupImage} from "./constants";
 
-export const addCard = (name, link) => {
+export const createCard = (name, link) => {
   const cardTemplate = document.querySelector('#cardTemplate').content;
   const card = cardTemplate.cloneNode(true);
   const image = card.querySelector('.card__image');
@@ -32,5 +32,9 @@ export const addCard = (name, link) => {
     openPopup(popupImage);
   });
 
-  photoGridCards.prepend(card);
+  return card;
+}
+
+export const addCard = (listElement, cardElement) => {
+  listElement.prepend(cardElement);
 }

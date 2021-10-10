@@ -14,6 +14,10 @@ export const photoGridCards = document.querySelector('.photo-grid__cards');
 export const popupImage = document.querySelector('.popup_image');
 export const modalImage = popupImage.querySelector('.modal__img');
 export const modalImageCaption = popupImage.querySelector('.modal__caption');
+export const closeButtonEdit = popupEdit.querySelector('.popup__close');
+export const closeButtonAdd = popupAdd.querySelector('.popup__close');
+export const closeButtonImage = popupImage.querySelector('.popup__close');
+
 
 export const initialCards = [
   {

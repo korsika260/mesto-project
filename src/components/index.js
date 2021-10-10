@@ -1,6 +1,6 @@
 import {closePopup, openPopup} from './modal'
 import {clearValidation, enableValidation} from './validate';
-import {addCard} from './card'
+import {addCard, createCard} from './card'
 import {
   btnProfileEdit,
   formAdd,
@@ -14,7 +14,7 @@ import {
   profileAdd,
   profileName,
   profileSubtitle,
-  initialCards
+  initialCards, closeButtonEdit, popupImage, closeButtonAdd, closeButtonImage, photoGridCards
 } from "./constants";
 
 // открыть попап редактирования профиля
@@ -36,7 +36,7 @@ formEdit.addEventListener('submit', function (evt) {
 });
 
 initialCards.forEach(item => {
-  addCard(item.name, item.link);
+  addCard(photoGridCards, createCard(item.name, item.link));
 });
 
 // добавить обработчики на кнопки открытия и закрытия попапа редактирования нового места
@@ -49,11 +49,24 @@ formAdd.addEventListener('submit', function (evt) {
   evt.preventDefault();
   const name = inputAddName.value;
   const link = inputAddLink.value;
-  addCard(name, link);
+  addCard(photoGridCards, createCard(name, link));
   inputAddName.value = '';
   inputAddLink.value = '';
   closePopup(popupAdd);
 });
+
+closeButtonEdit.addEventListener('click', function () {
+    closePopup(popupEdit);
+  });
+
+closeButtonAdd.addEventListener('click', function () {
+  closePopup(popupAdd);
+});
+
+closeButtonImage.addEventListener('click', function () {
+  closePopup(popupImage);
+});
+
 
 enableValidation({
   formSelector: '.form',
